@@ -1,3 +1,5 @@
+from sys import exit
+
 def add(num1, num2):
     return num1 + num2
 
@@ -23,6 +25,17 @@ def mod(num1, num2):
     return num1 % num2
 
 def engine(operator, num1, num2):
-	dict = {'+':'add', '-':'subtract', '*':'multiply', 
+	dictionary = {'+':'add', '-':'subtract', '*':'multiply', 
 	'/':'divide', 'square':'square', 'cube':'cube',
 	'pow':'power', 'mod':'mod'}
+
+calculation = raw_input("> ")
+tokens = calculation.split(" ")
+
+if str.lower(tokens[0]) == 'q':
+    quit(0)
+
+newstring = '%r' % tokens[0]
+print newstring
+
+# print dict["%r"] % newstring

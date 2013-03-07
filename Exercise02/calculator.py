@@ -26,3 +26,9 @@ def engine(operator, num1, num2):
 	dict = {'+':'add', '-':'subtract', '*':'multiply', 
 	'/':'divide', 'square':'square', 'cube':'cube',
 	'pow':'power', 'mod':'mod'}
+
+calculation = raw_input("> ")
+tokens = calculation.split(" ")
+print tokens
+
+
